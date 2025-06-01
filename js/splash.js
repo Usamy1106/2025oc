@@ -3,19 +3,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const splashVideo = document.getElementById('splashVideo');
     const wrapper = document.getElementById('Wrapper');
 
-    // 遷移処理を関数化（共通化）
     const transitionToMain = () => {
         splash.classList.add('fade-out');
+        wrapper.style.display = 'block';
         wrapper.classList.add('show');
     };
 
-    // 動画再生終了時に遷移
+    // 動画が終了したら遷移
     splashVideo.addEventListener('ended', transitionToMain);
 
-    // 8秒後に再生が終わっていなければ強制的に遷移
+    // 再生が始まったら記録
+    let hasStartedPlaying = false;
+    splashVideo.addEventListener('playing', () => {
+        hasStartedPlaying = true;
+    });
+
+    // 2秒経っても再生されていなければ強制遷移
     setTimeout(() => {
-        if (!splash.classList.contains('fade-out')) {
+        if (!hasStartedPlaying) {
             transitionToMain();
         }
-    }, 7000);
+    }, 2000);
 });
