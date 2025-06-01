@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // 遷移処理を関数化（共通化）
     const transitionToMain = () => {
         splash.classList.add('fade-out');
-        wrapper.style.display = 'block';
         wrapper.classList.add('show');
     };
 
@@ -18,5 +17,5 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!splash.classList.contains('fade-out')) {
             transitionToMain();
         }
-    }, 8000);
+    }, 7000);
 });
