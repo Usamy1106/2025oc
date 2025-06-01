@@ -4,7 +4,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +17,14 @@
     pointer-events: none;
 }
 
-#splash video {
+#splashVideo {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 #Wrapper {
+    display: none;
     opacity: 0;
     transition: opacity 1s ease;
 }
@@ -103,7 +103,7 @@
 }
 
 .human-img.zoomIn.action {
-    animation: zoomIn-Animation .4s ease-in-out .3s forwards;
+    animation: zoomIn-Animation .4s ease-in-out 1s forwards;
 }
 
 @keyframes zoomIn-Animation {
