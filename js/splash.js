@@ -23,5 +23,5 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!hasStartedPlaying) {
             transitionToMain();
         }
-    }, 2000);
+    }, 3000);
 });
