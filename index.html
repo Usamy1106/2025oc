@@ -41,8 +41,10 @@
     <div id="splash">
         <video id="splashVideo" autoplay muted playsinline>
             <source src="images/splash.mp4" type="video/mp4" media="(min-width: 768px)">
-            <source src="images/splash_TT.mp4" type="video/mp4" media="(max-width: 767px)">
         </video>
+        <picture id="splashVideo">
+            <source srcset="images/splash_TT.png" media="(max-width: 767px)">
+        </picture>
     </div>
     <div id="Wrapper">
         <header></header>
