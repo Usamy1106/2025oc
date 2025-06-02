@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const splash = document.getElementById('splash');
-    const splashVideo = document.getElementById('splashVideo');
+    const splashImage = document.getElementById('splashImage');
     const wrapper = document.getElementById('Wrapper');
 
     const transitionToMain = () => {
@@ -9,19 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
         wrapper.classList.add('show');
     };
 
-    // 動画が終了したら遷移
-    splashVideo.addEventListener('ended', transitionToMain);
-
-    // 再生が始まったら記録
-    let hasStartedPlaying = false;
-    splashVideo.addEventListener('playing', () => {
-        hasStartedPlaying = true;
-    });
-
-    // 2秒経っても再生されていなければ強制遷移
+    // 強制的に3秒後に遷移（APNGにはendedイベントがない）
     setTimeout(() => {
-        if (!hasStartedPlaying) {
-            transitionToMain();
-        }
-    }, 3000);
+        transitionToMain();
+    }, 5000);
 });
