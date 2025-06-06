@@ -377,6 +377,7 @@
     }
 }
 
+
 .reset-pop {
     animation: popIn 0.4s ease-out;
 }
@@ -571,7 +572,7 @@
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1280px) {
     .hero-area {
         margin-top: 0;
     }
