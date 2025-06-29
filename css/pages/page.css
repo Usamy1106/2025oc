@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+
+
+.pages-top__nav {
+    width: 70vw;
+    margin: 50px auto 0;
+}
+
+.pages-top__nav ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pages-top__nav li {
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -ms-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    color: var(--color-Black);
+    transform: rotate(17deg);
+    font-size: var(--font-size-R);
+    font-weight: 500;
+    line-height: 1.25em;
+    position: relative;
+}
+
+.middle-dot {
+    display: inline-block;
+    transform: translateX(0.2em);
+    /* または translateY() で調整 */
+}
+
+.pages-top__nav li a {
+    transition: all 0.4s ease;
+}
+
+.pages-top__nav li:hover a {
+    color: var(--color-NETSU);
+}
+
+.selected a {
+    color: var(--color-NETSU);
+    pointer-events: none;
+}
+
+.pages-top__nav li:nth-of-type(1) .select-line {
+    position: absolute;
+    top: 0;
+    right: -0.8em;
+    height: 10em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(2) .select-line {
+    position: absolute;
+    top: 0;
+    right: -0.5em;
+    height: 2.2em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(3) .select-line {
+    position: absolute;
+    top: 0;
+    right: -0.8em;
+    height: 5em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(4) .select-line {
+    position: absolute;
+    top: 0;
+    right: -0.5em;
+    height: 7em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(5) .select-line {
+    position: absolute;
+    top: 0;
+    right: -0.5em;
+    height: 8em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(6) .select-line {
+    position: absolute;
+    top: 0;
+    right: -1em;
+    height: 4em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(7) .select-line {
+    position: absolute;
+    top: 0;
+    right: -1em;
+    height: 12em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(8) .select-line {
+    position: absolute;
+    top: 0;
+    right: -1em;
+    height: 10em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(9) .select-line {
+    position: absolute;
+    top: 0;
+    right: -0.5em;
+    height: 2.2em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(10) .select-line {
+    position: absolute;
+    top: 0;
+    right: -0.5em;
+    height: 2.2em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.pages-top__nav li:nth-of-type(11) .select-line {
+    position: absolute;
+    top: 0;
+    right: -0.5em;
+    height: 3em;
+    width: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.program-selecter {
+    margin-bottom: 32vh;
+}
+
+.program-selecter__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    height: 40vh;
+    margin: 16vh auto 0;
+}
+
+.program-selecter__container__program picture {
+    width: 12vw;
+    margin: 0 auto
+}
+
+.program-selecter__container__program h2 {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.programs {
+    width: 38vw;
+    margin: 16vh auto
+}
+
+.porgrams-content {
+    margin-bottom: 16vh
+}
+
+.porgrams-content h4 {
+    font-size: var(--font-size-R);
+    font-weight: 500;
+    line-height: var(--line-height-Heading-S);
+    letter-spacing: var(--letter-spacing-Heading-S);
+    margin-bottom: 1em;
+}
+
+.porgrams-content h3 {
+    font-size: var(--font-size-Heading-R);
+    font-weight: 500;
+    line-height: var(--line-height-Heading-R);
+    letter-spacing: var(--letter-spacing-Heading-R);
+}
+
+.porgrams-content__desciption {
+    font-size: var(--font-size-R);
+    font-weight: 400;
+    line-height: var(--line-height-R);
+    letter-spacing: var(--letter-spacing-R);
+    margin: 1em 0;
+}
+
+.porgrams-content .place {
+    color: var(--color-NETSU);
+    font-weight: 500;
+    line-height: var(--line-height-Heading-S);
+    letter-spacing: var(--letter-spacing-Heading-S);
+    margin-bottom: 1.2em
+}
+
+.porgrams-content .dates-times {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dates-times__content {
+    text-align: center;
+}
+
+.date-19,
+.date-19 .weekday {
+    color: var(--color-BLUE);
+}
+
+.date-20,
+.date-20 .weekday {
+    color: var(--color-NETSU);
+}
+
+.date-19 time,
+.date-20 time {
+    font-family: var(--jp-font);
+    font-size: var(--font-size-Heading-R);
+    font-weight: 500;
+    line-height: var(--line-height-Heading-R);
+    letter-spacing: var(--letter-spacing-Heading-R);
+}
+
+.date-19 .weekday,
+.date-20 .weekday {
+    font-family: var(--jp-font);
+    font-size: var(--font-size-R);
+    font-weight: 500;
+    line-height: var(--line-height-Heading-R);
+    letter-spacing: var(--letter-spacing-Heading-R);
+}
+
+.dates-times__content .time {
+    font-family: var(--jp-font);
+    font-size: var(--font-size-R);
+    font-weight: 500;
+    line-height: var(--line-height-Heading-R);
+    letter-spacing: var(--letter-spacing-Heading-R);
+}
+
+.rocks-decoration {
+    width: calc(var(--line-height-Heading-R) * 3.4);
+    margin: 12vh auto;
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+}
+
+.rocks-decoration img {}

@@ -4,6 +4,7 @@
     margin: 0;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .tittle,
@@ -13,6 +14,7 @@
 .text-oc2025__sp,
 .text-date {
     transition: opacity 0.2s linear;
+    z-index: 1;
 }
 
 .tittle {
@@ -70,6 +72,7 @@
 
 .human_1 {
     position: fixed;
+    z-index: 1;
     top: calc(386 / 1080 * 100vh);
     /* 約35.74vh */
     left: calc(451 / 1920 * 100vw);
@@ -83,6 +86,7 @@
 
 .human_2 {
     position: fixed;
+    z-index: 1;
     top: calc(-14 / 1080 * 100vh);
     /* 約-1.30vh */
     left: calc(471 / 1920 * 100vw);
@@ -96,6 +100,7 @@
 
 .human_3 {
     position: fixed;
+    z-index: 1;
     top: calc(395 / 1080 * 100vh);
     /* 約36.57vh */
     left: calc(45 / 1920 * 100vw);
@@ -108,6 +113,7 @@
 
 .human_4 {
     position: fixed;
+    z-index: 1;
     top: calc(108 / 1080 * 100vh);
     /* 約10.00vh */
     left: calc(1497 / 1920 * 100vw);
@@ -120,6 +126,7 @@
 
 .human_5 {
     position: fixed;
+    z-index: 1;
     top: calc(60 / 1080 * 100vh);
     /* 約5.56vh */
     left: calc(78 / 1920 * 100vw);
@@ -132,6 +139,7 @@
 
 .human_6 {
     position: fixed;
+    z-index: 1;
     top: calc(-1.9 / 1080 * 100vh);
     /* 約-0.18vh */
     left: calc(792 / 1920 * 100vw);
@@ -156,6 +164,7 @@
 
 .human_8 {
     position: fixed;
+    z-index: 1;
     top: calc(244 / 1080 * 100vh);
     /* 約22.59vh */
     left: calc(1209 / 1920 * 100vw);
@@ -168,6 +177,7 @@
 
 .human_9 {
     position: fixed;
+    z-index: 1;
     top: calc(635 / 1080 * 100vh);
     /* 約58.80vh */
     left: calc(1429 / 1920 * 100vw);
@@ -180,6 +190,7 @@
 
 .human_10 {
     position: fixed;
+    z-index: 1;
     top: calc(822 / 1080 * 100vh);
     /* 約76.11vh */
     left: calc(1135 / 1920 * 100vw);
