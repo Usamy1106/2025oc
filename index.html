@@ -37,7 +37,6 @@
 </head>
 
 <body>
-
     <div id="splash">
         <video id="splashVideo" autoplay muted playsinline>
             <source src="images/splash.mp4" type="video/mp4" media="(min-width: 768px)">
@@ -45,7 +44,42 @@
         </video>
     </div>
     <div id="Wrapper">
-        <header></header>
+        <header>
+            <div class="g-nav-openbtn">
+                <div class="openbtn-area">
+                    <span>
+                        <picture>
+                            <source srcset="images/hamburger-menu-line01.webp" type="image/webp">
+                            <source srcset="images/hamburger-menu-line01.avif" type="image/avif">
+                            <img src="images/hamburger-menu-line01.png" alt="">
+                        </picture>
+                    </span><span>
+                        <picture>
+                            <source srcset="images/hamburger-menu-line02.webp" type="image/webp">
+                            <source srcset="images/hamburger-menu-line02.avif" type="image/avif">
+                            <img src="images/hamburger-menu-line02.png" alt="">
+                        </picture>
+                    </span><span>
+                        <picture>
+                            <source srcset="images/hamburger-menu-line03.webp" type="image/webp">
+                            <source srcset="images/hamburger-menu-line03.avif" type="image/avif">
+                            <img src="images/hamburger-menu-line03.png" alt="">
+                        </picture>
+                    </span>
+                </div>
+            </div>
+            <nav id="g-nav">
+                <div id="g-nav-list">
+                    <ul id="g-navi text-black">
+                        <li><a href="#program">プログラム</a></li>
+                        <li><a href="#about">オープンキャンパスについて</a></li>
+                        <li><a href="#theme">テーマについて</a></li>
+                        <li><a href="#pic-up-program">注目のイベント</a></li>
+                        <li><a href="#access">アクセス</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <main>
             <div class="hero-area">
                 <h1>
@@ -121,49 +155,302 @@
                     <img src="images/human_10.png" alt="">
                 </picture>
             </div>
-            <section class="theme animation-trigger">
+            <section id="program" class="program">
                 <div>
-                    <h2>今年のテーマは造熱!!</h2>
-                    <p>東京造形大学の学生らは、造るという人間的活動に対して日々、懸命に向き合っています。その熱は、ただ強く激しい、一面的なものではありません。ある人にとっては牧歌的で優しく、ある人にとっては苦く、直視することを避けたくなるものかもしれません。しかし、逃げずに向き合った先にこそ志の強い、変容し続ける自由な「造熱」があります。
-                    </p>
+                    <a href="html/photography.html">
+                        <i class="program-img">
+                            <picture class="program-img__Photography">
+                                <source srcset="images/Photography.webp" type="image/webp">
+                                <img src="images/Photography.png" alt="Photography">
+                            </picture>
+                        </i>
+                        <span>写真専攻領域</span>
+                    </a>
+                    <a href="html/animation.html">
+                        <i class="program-img">
+                            <picture class="program-img__Animation">
+                                <source srcset="images/Animation.webp" type="image/webp">
+                                <img src="images/Animation.png" alt="Animation">
+                            </picture>
+                        </i>
+                        <span>アニメーション<br>専攻領域</span>
+                    </a>
                 </div>
-                <picture class="human-img zoomIn">
-                    <source srcset="images/human_7.avif" type="image/avif">
-                    <source srcset="images/human_7.webp" type="image/webp">
-                    <img src="images/human_7.png" alt="">
-                </picture>
-            </section>
-            <section class="about animation-trigger">
                 <div>
-                    <h2>オープンキャンパスについて</h2>
+                    <a href="html/graphicDesign.html">
+                        <i class="program-img">
+                            <picture class="program-img__GraphicDesign">
+                                <source srcset="images/GraphicDesign.webp" type="image/webp">
+                                <img src="images/GraphicDesign.png" alt="GraphicDesign">
+                            </picture>
+                        </i>
+                        <span>グラフィックデザイン<br>専攻領域</span>
+                    </a>
+                    <a href="html/filmMovingImage.html">
+                        <i class="program-img">
+                            <picture class="program-img__FilmMovingImage">
+                                <source srcset="images/FilmMovingImage.webp" type="image/webp">
+                                <img src="images/FilmMovingImage.png" alt="FilmMovingImage">
+                            </picture>
+                        </i>
+                        <span>映画・映像専攻領域</span>
+                    </a>
+                    <a href="html/mediaDesign.html">
+                        <i class="program-img">
+                            <picture class="program-img__MediaDesign">
+                                <source srcset="images/MediaDesign.webp" type="image/webp">
+                                <img src="images/MediaDesign.png" alt="MediaDesign">
+                            </picture>
+                        </i>
+                        <span>メディアデザイン<br>専攻領域</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="html/industrialDesign.html">
+                        <i class="program-img">
+                            <picture class="program-img__IndustrialDesign">
+                                <source srcset="images/Photography.webp" type="image/webp">
+                                <img src="images/IndustrialDesign.png" alt="IndustrialDesign">
+                            </picture>
+                        </i>
+                        <span>インダストリアルデザイン<br>専攻領域</span>
+                    </a>
+                    <a href="html/sculpture.html">
+                        <i class="program-img">
+                            <picture class="program-img__Sculpture">
+                                <source srcset="images/Sculpture.webp" type="image/webp">
+                                <img src="images/Sculpture.png" alt="Sculpture">
+                            </picture>
+                        </i>
+                        <span>彫刻専攻領域</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="html/furnitureInteriorArchitecture.html">
+                        <i class="program-img">
+                            <picture class="program-img__FurnitureInteriorArchitecture">
+                                <source srcset="images/FurnitureInteriorArchitecture.webp" type="image/webp">
+                                <img src="images/FurnitureInteriorArchitecture.png" alt="FurnitureInteriorArchitecture">
+                            </picture>
+                        </i>
+                        <span>室内建築専攻領域</span>
+                    </a>
+                    <a href="html/others.html">
+                        <i class="program-img">
+                            <picture class="program-img__others">
+                                <source srcset="images/others.webp" type="image/webp">
+                                <img src="images/others.png" alt="others">
+                            </picture>
+                        </i>
+                        <span>その他</span>
+                    </a>
+                </div>
+                <div>
+                    <a href="html/textileDesign.html">
+                        <i class="program-img">
+                            <picture class="program-img__TextileDesign">
+                                <source srcset="images/TextileDesign.webp" type="image/webp">
+                                <img src="images/TextileDesign.png" alt="TextileDesign">
+                            </picture>
+                        </i>
+                        <span>テキスタイルデザイン<br>専攻領域</span>
+                    </a>
+                    <a href="html/painting.html">
+                        <i class="program-img">
+                            <picture class="program-img__Painting">
+                                <source srcset="images/Painting.webp" type="image/webp">
+                                <img src="images/Painting.png" alt="Painting">
+                            </picture>
+                        </i>
+                        <span>絵画専攻領域</span>
+                    </a>
+                </div>
+            </section>
+            <section id="about" class="about animation-trigger">
+                <div class="about-content">
+                    <h2 class="diagonal green">オープンキャンパスについて</h2>
                     <p>当日は作品展示・上映はもちろん、体験授業や学生のプレゼンテーションによる作品講評会、各専攻領域のさまざまなワークショップも数多く企画しています。緑に囲まれた自然豊かな東京造形大学のキャンパスで、どんなデザインと美術の学びがあるのか？ぜひ自身の五感で体験しにいらしてください。
                     </p>
-                    <p class="note">※オープンキャンパスで教員による大学院入試の事前相談は行っておりません。</p>
+                    <p class="about__note">※オープンキャンパスで教員による大学院入試の事前相談は行っておりません。</p>
                 </div>
+                <picture class="human-img zoomIn">
+                    <source srcset="images/human_2.avif" type="image/avif">
+                    <source srcset="images/human_2.webp" type="image/webp">
+                    <img src="images/human_2.png" alt="">
+                </picture>
+                <picture class="human-img zoomIn">
+                    <source srcset="images/human_5.avif" type="image/avif">
+                    <source srcset="images/human_5.webp" type="image/webp">
+                    <img src="images/human_5.png" alt="">
+                </picture>
                 <picture class="human-img zoomIn">
                     <source srcset="images/human_4.avif" type="image/avif">
                     <source srcset="images/human_4.webp" type="image/webp">
                     <img src="images/human_4.png" alt="">
                 </picture>
             </section>
-            <section class="coming-soon animation-trigger">
-                <div>
-                    <p class="coming-soon-text">Coming Soon...</p>
-                    <picture class="bg-box">
-                        <source srcset="images/coming-soon__bg-img.webp" type="image/webp">
-                        <source srcset="images/coming-soon__bg-img.avif" type="image/avif">
-                        <img src="images/coming-soon__bg-img.png" alt="">
-                    </picture>
+            <section id="theme" class="theme animation-trigger">
+                <div class="theme-content">
+                    <h2 class="diagonal red">今年のテーマは造熱!!</h2>
+                    <p>東京造形大学の学生らは、造るという人間的活動に対して日々、懸命に向き合っています。その熱は、ただ強く激しい、一面的なものではありません。ある人にとっては牧歌的で優しく、ある人にとっては苦く、直視することを避けたくなるものかもしれません。しかし、逃げずに向き合った先にこそ志の強い、変容し続ける自由な「造熱」があります。
+                    </p>
                 </div>
                 <picture class="human-img zoomIn">
                     <source srcset="images/human_8.avif" type="image/avif">
                     <source srcset="images/human_8.webp" type="image/webp">
                     <img src="images/human_8.png" alt="">
                 </picture>
+                <picture class="human-img zoomIn">
+                    <source srcset="images/human_7.avif" type="image/avif">
+                    <source srcset="images/human_7.webp" type="image/webp">
+                    <img src="images/human_7.png" alt="">
+                </picture>
+                <picture class="human-img zoomIn">
+                    <source srcset="images/human_1.avif" type="image/avif">
+                    <source srcset="images/human_1.webp" type="image/webp">
+                    <img src="images/human_1.png" alt="">
+                </picture>
+            </section>
+            <section id="pic-up-program" class="pic-up-program">
+                <div class="pic-up-program__container">
+                    <div class="pic-up-program__content">
+                        <a href="">
+                            <picture class="pic-up-program__content__img">
+                                <source srcset="images/picup-img__NyuushiSetumeikai.avif" type="image/avif">
+                                <source srcset="images/hpicup-img__NyuushiSetumeikai.webp" type="image/webp">
+                                <img src="images/picup-img__NyuushiSetumeikai.jpg" alt="入試説明会の様子">
+                            </picture>
+                            <h3>入試説明会</h3>
+                            <p class="pic-up-program__content__text">
+                                本学の概要と2026年度入試について説明します。また、オープンキャンパスのために結成した学生ユニットから今回のテーマやコンセプトについても説明します。</p>
+                            <div class="pic-up-program__content__place-time">
+                                <span>4号館 4-A</span>
+                                <span>10:00～10:45</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pic-up-program__content">
+                        <a href="">
+                            <picture class="pic-up-program__content__img">
+                                <source srcset="images/picup-img__ShingakuSoudanCorner__NyuushiSankousakuhinTennji.webp"
+                                    type="image/webp">
+                                <source srcset="images/picup-img__ShingakuSoudanCorner__NyuushiSankousakuhinTennji.avif"
+                                    type="image/avif">
+                                <img src="images/picup-img__ShingakuSoudanCorner__NyuushiSankousakuhinTennji.jpg"
+                                    alt="進学相談コーナー＆入試参考作品展示の様子">
+                            </picture>
+                            <h3>進学相談コーナー＆入試参考作品展示</h3>
+                            <p class="pic-up-program__content__text">
+                                入試や進学に関する全般的な質問など、個別の相談にお答えします。2025年2月に実施した入試の解答作品の展示も行っています。</p>
+                            <div class="pic-up-program__content__place-time">
+                                <span>9号館（CS-Lab）</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pic-up-program__content">
+                        <a href="">
+                            <picture class="pic-up-program__content__img">
+                                <source srcset="images/picup-img__GakuseiSieikatuSoudann.webp" type="image/webp">
+                                <source srcset="images/picup-img__GakuseiSieikatuSoudann.avif" type="image/avif">
+                                <img src="images/picup-img__GakuseiSieikatuSoudann.jpg" alt="学生生活相談の様子">
+                            </picture>
+                            <h3>学生生活相談</h3>
+                            <p class="pic-up-program__content__text">
+                                入試や進学に関する全般的な質問など、個別の相談にお答えします。2025年2月に実施した入試の解答作品の展示も行っています。</p>
+                            <div class="pic-up-program__content__place-time">
+                                <span>9号館（CS-Lab）</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pic-up-program__content">
+                        <a href="">
+                            <picture class="pic-up-program__content__img">
+                                <source srcset="images/picup-img__DaigakuinnShingakusoudanCorner.webp"
+                                    type="image/webp">
+                                <source srcset="images/picup-img__DaigakuinnShingakusoudanCorner.avif"
+                                    type="image/avif">
+                                <img src="images/picup-img__DaigakuinnShingakusoudanCorner.jpg" alt="大学院進学相談コーナーの様子">
+                            </picture>
+                            <h3>大学院進学相談コーナー</h3>
+                            <p class="pic-up-program__content__text">大学院に関する質問にお答えします。<br>
+                                ※希望指導教員による事前相談は行いません。</p>
+                            <div class="pic-up-program__content__place-time">
+                                <span>9号館（CS-Lab）</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pic-up-program__content">
+                        <a href="">
+                            <picture class="pic-up-program__content__img">
+                                <source srcset="images/picup-img__KyousyokuKateiSoudanCorner.webp" type="image/webp">
+                                <source srcset="images/picup-img__KyousyokuKateiSoudanCorner.avif" type="image/avif">
+                                <img src="images/picup-img__KyousyokuKateiSoudanCorner.jpg" alt="教職課程相談コーナーの様子">
+                            </picture>
+                            <h3>教職課程相談コーナー</h3>
+                            <p class="pic-up-program__content__text">「どうしたら美術の先生になれるの？」「専攻を履修しながらどうやって教員免許が取得できるの？」<br>
+                                教職課程の担当教員がみなさんの疑問や相談に答えます。 </p>
+                            <div class="pic-up-program__content__place-time">
+                                <span>9号館（CS-Lab）</span>
+                                <span>13：00～15：00</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pic-up-program__content">
+                        <a href="">
+                            <picture class="pic-up-program__content__img">
+                                <source srcset="images/picup-img__GakugeiinnaKatei.webp" type="image/webp">
+                                <source srcset="images/picup-img__GakugeiinnaKatei.avif" type="image/avif">
+                                <img src="images/picup-img__GakugeiinnaKatei.jpg" alt="学芸員課程の様子">
+                            </picture>
+                            <h3>学芸員課程</h3>
+                            <p class="pic-up-program__content__text">美術館の専門職員である学芸員の資格を取得するための授業。実習の様子を中心に紹介します。</p>
+                            <div class="pic-up-program__content__place-time">
+                                <span>9号館（CS-Lab）</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <p class="pic-up-program__note">※写真はイメージです。</p>
+            </section>
+            <section id="access" class="access">
+                <div class="access__flex-container">
+                    <div>
+                        <address>
+                            <h2 class="blue">アクセス</h2>
+                            <p>東京造形大学</p>
+                            <p>〒192-0992 東京都八王子市宇津貫町1556</p>
+                            <p>TEL：042-637-8111</p>
+                            <p class="blue">
+                                交通：JR横浜線相原駅よりスクールバス5分・徒歩15分</p>
+                            <a href="https://www.zokei.ac.jp">https://www.zokei.ac.jp</a>
+                        </address>
+                        <div class="address__sns-container">
+                            <h3>Tokyo Zokei University</h3>
+                            <a href="https://x.com/TokyoZokeiUniv?s=20"><img src="images/x_logo.svg"
+                                    alt="Tokyo Zokei University X"></a>
+                            <a href="https://www.instagram.com/tokyo_zokei_univ_official/"><img
+                                    src="images/Instagram_Glyph_White.svg" alt="Tokyo Zokei University Instagram"></a>
+                        </div>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.5016391847885!2d139.33230007652176!3d35.61535797260854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60191d0f7e1c595b%3A0x3e28f1e3ea6180a2!2z5p2x5Lqs6YCg5b2i5aSn5a2m!5e0!3m2!1sja!2sjp!4v1751121595871!5m2!1sja!2sjp"
+                        width="354" height="354" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </section>
         </main>
         <footer>
-            <small>Copyright &copy; 2025 Tokyo Zokei University</small>
+
+            <div><img src="images/zokei-logo.svg" alt="Tokyo Zokei University"></div>
+            <div class="sns">
+                <h3>OPEN CAMPUS</h3>
+                <div class="sns__flex-container">
+                    <a href="https://x.com/TZUOPENCAMPUS"><img src="images/x_logo.svg" alt="Open Campus X"></a>
+                    <a href="https://www.instagram.com/tzuoc/"><img src="images/Instagram_Glyph_White.svg"
+                            alt="Open Campus Instagram"></a>
+                </div>
+            </div>
+            <p class="copyright">Copyright &copy; 2025 Tokyo Zokei University</p>
         </footer>
     </div>
     <script src="js/device.js"></script>
