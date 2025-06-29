@@ -11,10 +11,6 @@ html {
     overflow-y: scroll;
     scroll-padding-top: 10vh;
     font-size: 62.5%;
-    font-style: normal;
-    font-optical-sizing: auto;
-    line-break: strict;
-    font-feature-settings: "palt" on;
     background-color: var(--color-Ecru);
 }
 
@@ -31,13 +27,28 @@ img {
     --en-heading-font: adobe-caslon-pro, sans-serif;
     --en-copy-font: univers-next-pro, sans-serif;
     --jp-font: ryo-gothic-plusn, sans-serif;
+    --jichikai-font: novantique-script, sans-serif;
+
     --font-size-XL: clamp(2rem, calc(3rem + 0.625vw), 9rem);
-    --font-size-L: clamp(2.8rem, calc(1.4rem + 0.625vw), 5.4rem);
+    --font-size-Heading-R: clamp(2.8rem, calc(1.4rem + 0.625vw), 3.6rem);
     --font-size-R: clamp(1.4rem, calc(1.1rem + 0.625vw), 2rem);
-    --font-size-Rs: clamp(0.9rem, calc(0.72rem + 0.625vw), 1.4rem);
+    --font-size-Rs: clamp(0.9rem, calc(0.72rem + 0.625vw), 1.6rem);
     --font-size-S: clamp(0.7rem, calc(0.48rem + 0.5vw), 1rem);
+
+    --line-height-Heading-R: 1.5em;
+    --line-height-Heading-S: 1.5em;
+    --line-height-R: 215%;
+    --line-height-Rs: 206%;
+
+
+    --letter-spacing-Heading-R: 15%;
+    --letter-spacing-Heading-S: 10%;
+    --letter-spacing-R: 15%;
+    --letter-spacing-Rs: 15%;
+
     --header-size-vertical: clamp(20px, calc(12px + 2.5vw), 46px);
     --header-size--horizontal: clamp(32px, calc(20px + 5vw), 58px);
+
     --color-Black: #000000;
     --color-white: #fff;
     --color-Ecru: rgb(255 254 238);
@@ -47,39 +58,264 @@ img {
 
 }
 
+.jichikai-en {
+    font-size: calc(var(--font-size-R) + 20%);
+    font-family: var(--jichikai-font);
+    font-weight: 400;
+    font-style: normal;
+}
+
 h2,
+h3,
+h4,
 p,
-a {
+a,
+span,
+address,
+time {
     font-family: var(--jp-font);
-    color: var(--color-Black);
+    font-style: normal;
+    font-optical-sizing: auto;
+    line-break: strict;
+    font-feature-settings: "palt" on;
 }
 
 h2 {
-    font-size: var(--font-size-L);
+    font-size: var(--font-size-Heading-R);
     font-weight: 500;
-    margin-bottom: 0.5em;
+    line-height: var(--line-height-Heading-R);
+    letter-spacing: var(--letter-spacing-Heading-R);
 }
 
-p {
+p,
+address {
+    font-size: var(--font-size-R);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--line-height-R);
+    letter-spacing: var(--letter-spacing-R);
+}
+
+a {
+    color: var(--color-Black);
+    text-decoration: none;
+}
+
+.red {
+    color: var(--color-NETSU);
+}
+
+.green {
+    color: var(--color-GREEN);
+}
+
+.blue {
+    color: var(--color-BLUE);
+}
+
+#g-nav {
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position: fixed;
+    z-index: -999;
+    /*ナビのスタート位置と形状*/
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: all .6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive {
+    z-index: 999;
+    opacity: 1;
+    background: var(--color-Ecru);
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*リストのレイアウト設定*/
+
+
+#g-nav li {}
+
+#g-nav li a {
+    padding: 10px;
+    display: block;
+    font-size: var(--font-size-Heading-R);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    transition: all .4s
+}
+
+#g-nav li a:hover,
+#g-nav li a:active {
+    transform: scale(110%);
+}
+
+/*========= ボタンのためのCSS ===============*/
+.g-nav-openbtn {
+    position: fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    width: var(--header-size--horizontal);
+    height: var(--header-size-vertical);
+    transition: all .4s
+}
+
+.g-nav-openbtn:hover {
+    transform: scale(110%);
+}
+
+/*×に変化*/
+.g-nav-openbtn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+}
+
+.g-nav-openbtn span:nth-of-type(1) {
+    top: 0;
+}
+
+.g-nav-openbtn span:nth-of-type(2) {
+    top: 50%;
+}
+
+.g-nav-openbtn span:nth-of-type(3) {
+    top: 100%;
+}
+
+.g-nav-openbtn.active span:nth-of-type(1) {
+    top: 50%;
+    transform: rotate(-45deg);
+    width: var(--header-size--horizontal);
+}
+
+.g-nav-openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.g-nav-openbtn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: rotate(45deg);
+    width: var(--header-size--horizontal);
+}
+
+.pic-up-program {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.pic-up-program__container {
+    display: flex;
+    gap: 6em 8em;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.pic-up-program__content {
+    flex: 1 1 calc(33.333% - (2 * 8em / 3));
+    /* gapを自動調整 */
+    max-width: calc(33.333% - (2 * 8em / 3));
+    /* 強制的に3列まで */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.pic-up-program h3 {
+    font-size: var(--font-size-R);
+    font-weight: 500;
+    margin: 0.4em 0 0.2em;
+
+}
+
+.pic-up-program__note {
+    color: var(--color-BLUE);
+}
+
+.pic-up-program__content__text {
+    font-size: var(--font-size-Rs);
+    line-height: var(--line-height-Rs);
+    letter-spacing: var(--letter-spacing-Rs);
+    height: 10em;
+    margin-bottom: 1em;
+}
+
+.pic-up-program__content__place-time span {
+    font-size: var(--font-size-Rs);
+    line-height: var(--line-height-Rs);
+    letter-spacing: var(--letter-spacing-Rs);
+}
+
+footer {
+    text-align: center;
+    width: 20vw;
+    margin: 16vh auto 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+footer .copyright {
+    font-family: var(--en-heading-font) !important;
     font-size: var(--font-size-R);
     font-weight: 400;
-    line-height: 2em;
-    letter-spacing: 0.2em;
-}
-
-section {
-    width: 40vw;
-    margin: 50vh auto;
-
-}
-
-footer small {
-    font-family: var(--en-heading-font);
-    font-size: var(--font-size-R);
-    font-weight: 400;
+    white-space: nowrap;
     display: block;
     text-align: center;
     margin-bottom: 2em;
+}
+
+.sns {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.sns h3 {
+    font-family: var(--en-heading-font);
+    font-size: var(--font-size-R);
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.sns__flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.sns__flex-container a img {
+    height: 4.6em;
+    transition: all .4s ease;
+}
+
+.sns a:hover img {
+    transform: scale(1.1)
 }
 
 /*
@@ -108,7 +344,6 @@ footer small {
     section {
         width: 60vw;
         margin: 40vh auto;
-
     }
 }
 
