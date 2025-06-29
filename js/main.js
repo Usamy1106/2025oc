@@ -25,21 +25,15 @@ const handleScroll = () => {
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
 
-
-
-
-
-/*
-//ハンバーガーメニュー
-document.querySelector('.openbtn').addEventListener('click', function() {
-  this.classList.toggle('active'); // ボタンに 'active' クラスを付与・除去
-  document.getElementById('g-nav').classList.toggle('panelactive'); // ナビゲーションに 'panelactive' クラスを付与・除去
+// --- ハンバーガーメニュー ---
+document.querySelector('.g-nav-openbtn').addEventListener('click', function () {
+  this.classList.toggle('active');
+  document.getElementById('g-nav').classList.toggle('panelactive');
 });
 
-// ナビゲーションのリンクがクリックされたときの処理
-document.querySelectorAll('#g-nav a').forEach(function(navLink) {
-  navLink.addEventListener('click', function() {
-    document.querySelector('.openbtn').classList.remove('active'); // ボタンの 'active' クラスを除去
-    document.getElementById('g-nav').classList.remove('panelactive'); // ナビゲーションの 'panelactive' クラスを除去
+document.querySelectorAll('#g-nav a').forEach(function (navLink) {
+  navLink.addEventListener('click', function () {
+    document.querySelector('.g-nav-openbtn').classList.remove('active');
+    document.getElementById('g-nav').classList.remove('panelactive');
   });
-});*/
+});
