@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
         wrapper.classList.add('show');
     };
 
+    // ハッシュがある場合はスプラッシュをスキップ
+    if (location.hash && location.hash !== '#top') {
+        transitionToMain();
+        return;
+    }
+
     // 動画が終了したら遷移
     splashVideo.addEventListener('ended', transitionToMain);
 
@@ -18,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hasStartedPlaying = true;
     });
 
-    // 2秒経っても再生されていなければ強制遷移
+    // 3秒経っても再生されていなければ強制遷移
     setTimeout(() => {
         if (!hasStartedPlaying) {
             transitionToMain();
