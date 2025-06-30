@@ -9,7 +9,9 @@
 
 html {
     overflow-y: scroll;
-    scroll-padding-top: 10vh;
+    overflow-x: hidden;
+    scroll-padding-top: 23vh;
+    scroll-behavior: smooth;
     font-size: 62.5%;
     background-color: var(--color-Ecru);
 }
@@ -29,21 +31,21 @@ img {
     --jp-font: ryo-gothic-plusn, sans-serif;
     --jichikai-font: novantique-script, sans-serif;
 
-    --font-size-XL: clamp(2rem, calc(3rem + 0.625vw), 9rem);
-    --font-size-Heading-R: clamp(2.8rem, calc(1.4rem + 0.625vw), 3.6rem);
-    --font-size-R: clamp(1.4rem, calc(1.1rem + 0.625vw), 2rem);
-    --font-size-Rs: clamp(0.9rem, calc(0.72rem + 0.625vw), 1.6rem);
-    --font-size-S: clamp(0.7rem, calc(0.48rem + 0.5vw), 1rem);
+    --font-size-Heading-L: clamp(1.5rem, calc(3rem + 0.625vw), 4.2rem);
+    --font-size-Heading-M: clamp(1.8rem, calc(1.4rem + 0.625vw), 3.6rem);
+    --font-size-Heading-Ms: clamp(1.32rem, calc(1.1rem + 1vw), 3.6rem);
+    --font-size-Heading-R: clamp(1.6rem, calc(1rem + 1vw), 3.6rem);
+    --font-size-R: clamp(1.2rem, calc(1.1rem + 0.625vw), 2rem);
+    --font-size-Rs: clamp(1rem, calc(0.72rem + 0.625vw), 1.6rem);
 
     --line-height-Heading-R: 1.5em;
     --line-height-Heading-S: 1.5em;
-    --line-height-R: 215%;
-    --line-height-Rs: 206%;
-
+    --line-height-R: clamp(183%, 199%, 215%);
+    --line-height-Rs: clamp(183%, 195%, 206%);
 
     --letter-spacing-Heading-R: 15%;
     --letter-spacing-Heading-S: 10%;
-    --letter-spacing-R: 15%;
+    --letter-spacing-R: clamp(10%, 12.5%, 15%);
     --letter-spacing-Rs: 15%;
 
     --header-size-vertical: clamp(20px, calc(12px + 2.5vw), 46px);
@@ -63,6 +65,7 @@ img {
     font-family: var(--jichikai-font);
     font-weight: 400;
     font-style: normal;
+    margin-left: 1em;
 }
 
 h2,
@@ -101,17 +104,6 @@ a {
     text-decoration: none;
 }
 
-.red {
-    color: var(--color-NETSU);
-}
-
-.green {
-    color: var(--color-GREEN);
-}
-
-.blue {
-    color: var(--color-BLUE);
-}
 
 #g-nav {
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
@@ -157,21 +149,24 @@ a {
 /*リストのレイアウト設定*/
 
 
-#g-nav li {}
+#g-nav li {
+    margin-bottom: 2em;
+}
 
 #g-nav li a {
     padding: 10px;
     display: block;
     font-size: var(--font-size-Heading-R);
+    font-weight: 500;
+    line-height: var(--line-height-Heading-R);
+    letter-spacing: var(--letter-spacing-Heading-R);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 400;
     transition: all .4s
 }
 
 #g-nav li a:hover,
 #g-nav li a:active {
-    transform: scale(110%);
+    transform: translateX(0.4em);
 }
 
 /*========= ボタンのためのCSS ===============*/
@@ -226,25 +221,154 @@ a {
     width: var(--header-size--horizontal);
 }
 
+#page-top a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(80px, calc(60px + 4.5vw), 120px);
+    color: var(--color-Black);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: all 0.3s;
+}
+
+#page-top a span {
+    display: block;
+    font-family: var(--en-copy-font);
+    font-size: var(--font-size-R);
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    line-height: 130%;
+    margin-top: 0.2em;
+}
+
+#page-top a:hover {
+    transform: scale(1.06);
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 999;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(200px);
+    }
+}
+
+.red,
+.red a {
+    color: var(--color-NETSU);
+}
+
+.green,
+.green a {
+    color: var(--color-GREEN);
+}
+
+.blue,
+.blue a {
+    color: var(--color-BLUE);
+}
+
+#g-nav .red a::before {
+    content: "";
+    display: inline-block;
+    background-image: url('../images/rock-red.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 1em;
+    aspect-ratio: 1 / 1;
+}
+
+#g-nav .green a::before {
+    content: "";
+    display: inline-block;
+    background-image: url('../images/rock-green.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 1em;
+    aspect-ratio: 1 / 1;
+}
+
+#g-nav .blue a::before {
+    content: "";
+    display: inline-block;
+    background-image: url('../images/rock-blue.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 1em;
+    aspect-ratio: 1 / 1;
+}
+
 .pic-up-program {
     width: 70vw;
-    margin: 0 auto;
+    margin: 32vh auto 16vh;
 }
 
 .pic-up-program__container {
     display: flex;
-    gap: 6em 8em;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-content: flex-start;
 }
 
 .pic-up-program__content {
-    flex: 1 1 calc(33.333% - (2 * 8em / 3));
-    /* gapを自動調整 */
-    max-width: calc(33.333% - (2 * 8em / 3));
-    /* 強制的に3列まで */
-    box-sizing: border-box;
-    padding: 20px;
+    flex: 1 1 calc(33.333% - 4.33em);
+    /* 3列 */
+    max-width: calc(33.333% - 4.33em);
+    margin-bottom: 4em;
+    transition: all .3s ease-out;
+}
+
+.pic-up-program__content:hover {
+    transform: scale(1.02);
 }
 
 .pic-up-program h3 {
@@ -262,8 +386,7 @@ a {
     font-size: var(--font-size-Rs);
     line-height: var(--line-height-Rs);
     letter-spacing: var(--letter-spacing-Rs);
-    height: 10em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .pic-up-program__content__place-time span {
@@ -274,11 +397,10 @@ a {
 
 footer {
     text-align: center;
-    width: 20vw;
-    margin: 16vh auto 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+    position: relative;
+    z-index: 99;
+    width: fit-content;
+    margin: 0 auto 100px;
 }
 
 footer .copyright {
@@ -288,10 +410,16 @@ footer .copyright {
     white-space: nowrap;
     display: block;
     text-align: center;
-    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
-.sns {
+footer .zokei-logo {
+    width: clamp(260px, 30vw, 460px);
+    margin-bottom: clamp(32px, 10vw, 64px);
+
+}
+
+footer .sns {
     width: fit-content;
     margin: 0 auto;
 }
@@ -309,7 +437,7 @@ footer .copyright {
 }
 
 
-.sns__flex-container a img {
+footer .sns__flex-container a img {
     height: 4.6em;
     transition: all .4s ease;
 }
@@ -318,39 +446,39 @@ footer .copyright {
     transform: scale(1.1)
 }
 
-/*
-.fadeIn {
-    opacity: 0;
-    transform: translateY(10em);
+.flip-vertical-img {
+    display: block;
+    transform: scaleY(-1);
 }
 
-.fadeIn.action {
-    animation: fadeIn-Animation .4s ease-in-out forwards;
-}
 
-@keyframes fadeIn-Animation {
-    from {
-        opacity: 0;
-        transform: translateY(10em);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-*/
 @media only screen and (max-width: 1280px) {
-    section {
-        width: 60vw;
-        margin: 40vh auto;
+    .pic-up-program {
+        width: 80vw;
+        margin: 24vh auto 6vh;
+    }
+
+    footer {
+        margin-top: 0;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    section {
-        width: 94vw;
-        margin: 32vh auto;
-
+    .g-nav-openbtn {
+        top: 30px;
+        right: 30px;
     }
+
+    .pic-up-program {
+        width: 88vw;
+        margin: 16vh auto 16vh;
+    }
+
+    .pic-up-program__content {
+        flex: 1 1 calc(50% - 1em);
+        /* 2列 */
+        max-width: calc(50% - 1em);
+    }
+
+
 }
