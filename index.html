@@ -70,12 +70,12 @@
             </div>
             <nav id="g-nav">
                 <div id="g-nav-list">
-                    <ul id="g-navi text-black">
-                        <li><a href="#program">プログラム</a></li>
-                        <li><a href="#about">オープンキャンパスについて</a></li>
-                        <li><a href="#theme">テーマについて</a></li>
-                        <li><a href="#pic-up-program">注目のイベント</a></li>
-                        <li><a href="#access">アクセス</a></li>
+                    <ul id="g-navi">
+                        <li class="red"><a href="#program">プログラム</a></li>
+                        <li class="green"><a href="#about">オープンキャンパスについて</a></li>
+                        <li class="blue"><a href="#theme">テーマについて</a></li>
+                        <li class="red"><a href="#pic-up-program">注目のイベント</a></li>
+                        <li class="green"><a href="#access">アクセス</a></li>
                     </ul>
                 </div>
             </nav>
@@ -154,6 +154,15 @@
                     <source srcset="images/human_10.webp" type="image/webp">
                     <img src="images/human_10.png" alt="">
                 </picture>
+            </div>
+            <div id="page-top">
+                <a href="#">
+                    <picture>
+                        <source srcset="images/others.webp" type="image/webp">
+                        <img src="images/others.png" alt="Page Top">
+                    </picture>
+                    <span>PAGE<br>TOP</span>
+                </a>
             </div>
             <section id="program" class="program">
                 <div>
@@ -266,46 +275,46 @@
                     </a>
                 </div>
             </section>
-            <section id="about" class="about animation-trigger">
+            <section id="about" class="about">
                 <div class="about-content">
                     <h2 class="diagonal green">オープンキャンパスについて</h2>
                     <p>当日は作品展示・上映はもちろん、体験授業や学生のプレゼンテーションによる作品講評会、各専攻領域のさまざまなワークショップも数多く企画しています。緑に囲まれた自然豊かな東京造形大学のキャンパスで、どんなデザインと美術の学びがあるのか？ぜひ自身の五感で体験しにいらしてください。
                     </p>
                     <p class="about__note">※オープンキャンパスで教員による大学院入試の事前相談は行っておりません。</p>
                 </div>
-                <picture class="human-img zoomIn">
+                <picture class="human-img human-img01 zoomIn-trigger">
                     <source srcset="images/human_2.avif" type="image/avif">
                     <source srcset="images/human_2.webp" type="image/webp">
                     <img src="images/human_2.png" alt="">
                 </picture>
-                <picture class="human-img zoomIn">
+                <picture class="human-img human-img02 zoomIn-trigger">
                     <source srcset="images/human_5.avif" type="image/avif">
                     <source srcset="images/human_5.webp" type="image/webp">
                     <img src="images/human_5.png" alt="">
                 </picture>
-                <picture class="human-img zoomIn">
+                <picture class="human-img human-img03 zoomIn-trigger">
                     <source srcset="images/human_4.avif" type="image/avif">
                     <source srcset="images/human_4.webp" type="image/webp">
                     <img src="images/human_4.png" alt="">
                 </picture>
             </section>
-            <section id="theme" class="theme animation-trigger">
+            <section id="theme" class="theme">
                 <div class="theme-content">
                     <h2 class="diagonal red">今年のテーマは造熱!!</h2>
                     <p>東京造形大学の学生らは、造るという人間的活動に対して日々、懸命に向き合っています。その熱は、ただ強く激しい、一面的なものではありません。ある人にとっては牧歌的で優しく、ある人にとっては苦く、直視することを避けたくなるものかもしれません。しかし、逃げずに向き合った先にこそ志の強い、変容し続ける自由な「造熱」があります。
                     </p>
                 </div>
-                <picture class="human-img zoomIn">
+                <picture class="human-img human-img01 zoomIn-trigger">
                     <source srcset="images/human_8.avif" type="image/avif">
                     <source srcset="images/human_8.webp" type="image/webp">
                     <img src="images/human_8.png" alt="">
                 </picture>
-                <picture class="human-img zoomIn">
+                <picture class="human-img human-img02 zoomIn-trigger">
                     <source srcset="images/human_7.avif" type="image/avif">
                     <source srcset="images/human_7.webp" type="image/webp">
                     <img src="images/human_7.png" alt="">
                 </picture>
-                <picture class="human-img zoomIn">
+                <picture class="human-img human-img03 zoomIn-trigger">
                     <source srcset="images/human_1.avif" type="image/avif">
                     <source srcset="images/human_1.webp" type="image/webp">
                     <img src="images/human_1.png" alt="">
@@ -314,7 +323,7 @@
             <section id="pic-up-program" class="pic-up-program">
                 <div class="pic-up-program__container">
                     <div class="pic-up-program__content">
-                        <a href="">
+                        <a href="html/others.html#ExamInformationSession">
                             <picture class="pic-up-program__content__img">
                                 <source srcset="images/picup-img__NyuushiSetumeikai.avif" type="image/avif">
                                 <source srcset="images/hpicup-img__NyuushiSetumeikai.webp" type="image/webp">
@@ -330,7 +339,7 @@
                         </a>
                     </div>
                     <div class="pic-up-program__content">
-                        <a href="">
+                        <a href="html/others.html#UniversityConsultation">
                             <picture class="pic-up-program__content__img">
                                 <source srcset="images/picup-img__ShingakuSoudanCorner__NyuushiSankousakuhinTennji.webp"
                                     type="image/webp">
@@ -348,7 +357,7 @@
                         </a>
                     </div>
                     <div class="pic-up-program__content">
-                        <a href="">
+                        <a href="html/others.html#StudentLifeConsultation">
                             <picture class="pic-up-program__content__img">
                                 <source srcset="images/picup-img__GakuseiSieikatuSoudann.webp" type="image/webp">
                                 <source srcset="images/picup-img__GakuseiSieikatuSoudann.avif" type="image/avif">
@@ -363,7 +372,7 @@
                         </a>
                     </div>
                     <div class="pic-up-program__content">
-                        <a href="">
+                        <a href="html/others.html#GraduateSchoolAdmissionConsultation">
                             <picture class="pic-up-program__content__img">
                                 <source srcset="images/picup-img__DaigakuinnShingakusoudanCorner.webp"
                                     type="image/webp">
@@ -380,7 +389,7 @@
                         </a>
                     </div>
                     <div class="pic-up-program__content">
-                        <a href="">
+                        <a href="html/others.html#TeacherTraningCourseConsultation">
                             <picture class="pic-up-program__content__img">
                                 <source srcset="images/picup-img__KyousyokuKateiSoudanCorner.webp" type="image/webp">
                                 <source srcset="images/picup-img__KyousyokuKateiSoudanCorner.avif" type="image/avif">
@@ -396,7 +405,7 @@
                         </a>
                     </div>
                     <div class="pic-up-program__content">
-                        <a href="">
+                        <a href="html/others.html#CuratorCourse">
                             <picture class="pic-up-program__content__img">
                                 <source srcset="images/picup-img__GakugeiinnaKatei.webp" type="image/webp">
                                 <source srcset="images/picup-img__GakugeiinnaKatei.avif" type="image/avif">
@@ -424,12 +433,15 @@
                                 交通：JR横浜線相原駅よりスクールバス5分・徒歩15分</p>
                             <a href="https://www.zokei.ac.jp">https://www.zokei.ac.jp</a>
                         </address>
-                        <div class="address__sns-container">
+                        <div class="sns">
                             <h3>Tokyo Zokei University</h3>
-                            <a href="https://x.com/TokyoZokeiUniv?s=20"><img src="images/x_logo.svg"
-                                    alt="Tokyo Zokei University X"></a>
-                            <a href="https://www.instagram.com/tokyo_zokei_univ_official/"><img
-                                    src="images/Instagram_Glyph_White.svg" alt="Tokyo Zokei University Instagram"></a>
+                            <div class="sns__flex-container">
+                                <a href="https://x.com/TokyoZokeiUniv?s=20" class="sns-icon"><img
+                                        src="images/x_logo.svg" alt="Tokyo Zokei University X"></a>
+                                <a href="https://www.instagram.com/tokyo_zokei_univ_official/" class="sns-icon"><img
+                                        src="images/Instagram_Glyph_White.svg"
+                                        alt="Tokyo Zokei University Instagram"></a>
+                            </div>
                         </div>
                     </div>
                     <iframe
@@ -437,11 +449,30 @@
                         width="354" height="354" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+                <picture class="human-img human-img01 zoomIn-trigger">
+                    <source srcset="images/human_9.avif" type="image/avif">
+                    <source srcset="images/human_9.webp" type="image/webp">
+                    <img src="images/human_9.png" alt="">
+                </picture>
+                <picture class="human-img human-img02 zoomIn-trigger">
+                    <source srcset="images/human_10.avif" type="image/avif">
+                    <source srcset="images/human_10.webp" type="image/webp">
+                    <img src="images/human_10.png" alt="" class="flip-vertical-img">
+                </picture>
+                <picture class="human-img human-img03 zoomIn-trigger">
+                    <source srcset="images/human_6.avif" type="image/avif">
+                    <source srcset="images/human_6.webp" type="image/webp">
+                    <img src="images/human_6.png" alt="">
+                </picture>
+                <picture class="human-img human-img04 zoomIn-trigger">
+                    <source srcset="images/human_3.avif" type="image/avif">
+                    <source srcset="images/human_3.webp" type="image/webp">
+                    <img src="images/human_3.png" alt="">
+                </picture>
             </section>
         </main>
         <footer>
-
-            <div><img src="images/zokei-logo.svg" alt="Tokyo Zokei University"></div>
+            <div class="zokei-logo"><img src="images/zokei-logo.svg" alt="Tokyo Zokei University"></div>
             <div class="sns">
                 <h3>OPEN CAMPUS</h3>
                 <div class="sns__flex-container">
