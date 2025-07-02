@@ -81,7 +81,7 @@
     /* 約10.82vw */
     aspect-ratio: 207.789 / 220.207;
     rotate: 26.326deg;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_2 {
@@ -95,7 +95,7 @@
     /* 約16.06vw */
     aspect-ratio: 308.343 / 323.651;
     rotate: -31.898deg;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_3 {
@@ -108,7 +108,7 @@
     width: calc(173 / 1920 * 100vw);
     /* 約9.01vw */
     aspect-ratio: 173 / 182;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_4 {
@@ -121,7 +121,7 @@
     width: calc(363 / 1920 * 100vw);
     /* 約18.91vw */
     aspect-ratio: 121 / 119;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_5 {
@@ -134,7 +134,7 @@
     width: calc(303 / 1920 * 100vw);
     /* 約15.78vw */
     aspect-ratio: 101 / 98;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_6 {
@@ -148,7 +148,7 @@
     /* 約12.36vw */
     aspect-ratio: 237.347 / 264.524;
     rotate: 47.024deg;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_7 {
@@ -160,6 +160,7 @@
     width: calc(262 / 1920 * 100vw);
     /* 約13.65vw */
     aspect-ratio: 262 / 267;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_8 {
@@ -172,7 +173,7 @@
     width: calc(271 / 1920 * 100vw);
     /* 約14.11vw */
     aspect-ratio: 271 / 267;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_9 {
@@ -185,7 +186,7 @@
     width: calc(396 / 1920 * 100vw);
     /* 約20.63vw */
     aspect-ratio: 198 / 179;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .human_10 {
@@ -198,7 +199,7 @@
     width: calc(232 / 1920 * 100vw);
     /* 約12.08vw */
     aspect-ratio: 232 / 195;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.4s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 /* 上方向のS字アニメーション */

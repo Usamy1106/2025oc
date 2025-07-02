@@ -81,7 +81,7 @@
 }
 
 .program-pc .program4 {
-    width: calc(1692 / 1920 * 100vw);
+    width: calc(1648 / 1920 * 100vw);
     margin-top: clamp(-140px, calc(80px - 19.1vw), 80px);
 }
 
@@ -205,7 +205,7 @@
 
 .theme .human-img01 {
     position: absolute;
-    top: -220px;
+    top: -150px;
     left: clamp(-450px, calc(20px - (100vw - 375px) * 0.43), 20px);
     width: clamp(100px, 22vw, 260px);
 }
@@ -451,7 +451,7 @@
     .about .diagonal,
     .theme .diagonal {
         left: -6%;
-        top: -2.4em;
+        top: -3em;
     }
 
 }

@@ -18,7 +18,7 @@
     writing-mode: vertical-rl;
     color: var(--color-Black);
     transform: rotate(17deg);
-    font-size: var(--font-size-R);
+    font-size: var(--font-size-Heading-Ms);
     font-weight: 500;
     line-height: 1.25em;
     position: relative;
@@ -167,16 +167,8 @@
 }
 
 .program-selecter__container__program picture {
-    width: 60vw;
+    width: clamp(88px, calc(30px + 10vw), 252px);
     margin: 0 auto
-}
-
-.program-selecter__container__program picture .pc-img {
-    display: block;
-}
-
-.program-selecter__container__program picture .sp-img {
-    display: none;
 }
 
 .program-selecter__container__program h2 {
@@ -313,7 +305,7 @@
 .human-img__right {
     position: absolute;
     width: 18vw;
-    top: -16vh;
+    top: -12vh;
     right: -31vw;
 }
 
@@ -333,42 +325,42 @@
     top: 20vh;
 }
 
-.human-img01 {
+.human-img01 img {
     rotate: 16deg;
 }
 
-.human-img02 {
+.human-img02 img {
     rotate: 23deg;
 }
 
-.human-img03 {
+.human-img03 img {
     rotate: 350deg;
 }
 
 .human-img04 {}
 
-.human-img05 {
+.human-img05 img {
     rotate: 306deg;
 }
 
-.human-img06 {
+.human-img06 img {
     width: 16vw;
     rotate: 40deg;
 }
 
-.human-img07 {
+.human-img07 img {
     rotate: 12deg;
 }
 
-.human-img08 {
+.human-img08 img {
     rotate: 350deg;
 }
 
-.human-img09 {
+.human-img09 img {
     rotate: 195deg;
 }
 
-.human-img10 {
+.human-img10 img {
     rotate: 2deg;
 }
 
@@ -445,42 +437,36 @@
         display: none;
     }
 
-    .pc-img {
-        display: none;
-    }
-
-    .sp-img {
-        display: block;
-    }
-
     .programs {
         width: 88vw;
     }
 
     .human-img__left {
-        left: -8svw;
+        left: -8vw;
         top: auto;
         bottom: -16vh;
     }
 
     .human-img__right {
-        right: -6svw;
+        right: -6vw;
         top: clamp(-216px, calc(-80px + (100vw - 375px) * -0.1277), -80px);
     }
 
     .up-img__right {
-        top: -40vh;
+        top: -22vh;
+        /**/
     }
 
     .up-img__left {
-        top: -40vh;
+        top: -16vh;
+        /**/
     }
 
     .down-img__left {
-        top: 72vh;
+        top: 52vh;
     }
 
     .down-img__right {
-        top: 10vh;
+        top: 36vh;
     }
 }
