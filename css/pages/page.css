@@ -167,8 +167,16 @@
 }
 
 .program-selecter__container__program picture {
-    width: clamp(88px, calc(30px + 10vw), 252px);
+    width: 60vw;
     margin: 0 auto
+}
+
+.program-selecter__container__program picture .pc-img {
+    display: block;
+}
+
+.program-selecter__container__program picture .sp-img {
+    display: none;
 }
 
 .program-selecter__container__program h2 {
@@ -437,6 +445,14 @@
         display: none;
     }
 
+    .pc-img {
+        display: none;
+    }
+
+    .sp-img {
+        display: block;
+    }
+
     .programs {
         width: 88vw;
     }
@@ -451,7 +467,6 @@
         right: -6svw;
         top: clamp(-216px, calc(-80px + (100vw - 375px) * -0.1277), -80px);
     }
-
 
     .up-img__right {
         top: -40vh;
