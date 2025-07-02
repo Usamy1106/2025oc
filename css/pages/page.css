@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 .pages-top__nav {
     width: 70vw;
     margin: 50px auto 0;
@@ -307,7 +305,7 @@
 .human-img__right {
     position: absolute;
     width: 18vw;
-    top: -20vh;
+    top: -16vh;
     right: -31vw;
 }
 
@@ -316,7 +314,7 @@
 }
 
 .up-img__left {
-    top: -40vh;
+    top: -20vh;
 }
 
 .down-img__left {
@@ -324,7 +322,7 @@
 }
 
 .down-img__right {
-    top: 10vh;
+    top: 20vh;
 }
 
 .human-img01 {
@@ -351,19 +349,19 @@
 }
 
 .human-img07 {
-    rotate: 345deg;
+    rotate: 12deg;
 }
 
 .human-img08 {
-    rotate: 11deg;
+    rotate: 350deg;
 }
 
 .human-img09 {
-    rotate: 2deg;
+    rotate: 195deg;
 }
 
 .human-img10 {
-    rotate: 195deg;
+    rotate: 2deg;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -377,12 +375,33 @@
         margin: 12vh auto
     }
 
+    .porgrams-content {
+        position: relative;
+        margin-bottom: 12vh;
+    }
+
     .human-img__left {
         left: -20vw;
     }
 
     .human-img__right {
         right: -20vw;
+    }
+
+    .up-img__right {
+        top: -10vh;
+    }
+
+    .up-img__left {
+        top: -40vh;
+    }
+
+    .down-img__left {
+        top: 72vh;
+    }
+
+    .down-img__right {
+        top: 10vh;
     }
 
     .rocks-decoration {
@@ -403,6 +422,7 @@
         padding: 0 14em;
         justify-content: space-around;
         overflow-x: auto;
+        overflow-y: hidden;
         white-space: nowrap;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
@@ -422,14 +442,30 @@
     }
 
     .human-img__left {
-        left: 10px;
+        left: -8svw;
         top: auto;
         bottom: -16vh;
     }
 
     .human-img__right {
-        right: 10px;
+        right: -6svw;
         top: clamp(-216px, calc(-80px + (100vw - 375px) * -0.1277), -80px);
-        ;
+    }
+
+
+    .up-img__right {
+        top: -40vh;
+    }
+
+    .up-img__left {
+        top: -40vh;
+    }
+
+    .down-img__left {
+        top: 72vh;
+    }
+
+    .down-img__right {
+        top: 10vh;
     }
 }

@@ -80,7 +80,7 @@
     width: calc(207.789 / 1920 * 100vw);
     /* 約10.82vw */
     aspect-ratio: 207.789 / 220.207;
-    transform: rotate(26.326deg);
+    rotate: 26.326deg;
     transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
@@ -94,7 +94,7 @@
     width: calc(308.343 / 1920 * 100vw);
     /* 約16.06vw */
     aspect-ratio: 308.343 / 323.651;
-    transform: rotate(-31.898deg);
+    rotate: -31.898deg;
     transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
@@ -147,7 +147,7 @@
     width: calc(237.347 / 1920 * 100vw);
     /* 約12.36vw */
     aspect-ratio: 237.347 / 264.524;
-    transform: rotate(47.024deg);
+    rotate: 47.024deg;
     transition: transform 2s ease-in-out, opacity 2s ease-in-out;
 }
 
@@ -352,6 +352,7 @@
 
 
 /* アニメーション適用クラス（方向別） */
+.hero-area .human_2.action,
 .hero-area .human_3.action,
 .hero-area .human_4.action,
 .hero-area .human_6.action,
@@ -360,7 +361,6 @@
 }
 
 .hero-area .human_1.action,
-.hero-area .human_2.action,
 .hero-area .human_5.action {
     animation: moveLeft 2.5s ease-in forwards;
 }
@@ -478,7 +478,7 @@
         width: calc(207.789 / 1920 * 100vw);
         /* 約10.82vw */
         aspect-ratio: 207.789 / 220.207;
-        transform: rotate(26.326deg);
+        rotate: 26.326deg;
     }
 
     .human_2 {
@@ -490,7 +490,7 @@
         width: calc(308.343 / 1920 * 100vw);
         /* 約16.06vw */
         aspect-ratio: 308.343 / 323.651;
-        transform: rotate(-31.898deg);
+        rotate: -31.898deg;
     }
 
     .human_3 {
@@ -535,7 +535,7 @@
         width: calc(237.347 / 1920 * 100vw);
         /* 約12.36vw */
         aspect-ratio: 237.347 / 264.524;
-        transform: rotate(47.024deg);
+        rotate: 47.024deg;
     }
 
     .human_7 {
@@ -638,7 +638,7 @@
         left: calc(346 / 1024 * 100vw);
         width: clamp(40px, 15vw, 160px);
         height: auto;
-        transform: rotate(25.69deg);
+        rotate: 25.69deg;
         aspect-ratio: 84.065 / 89.089;
     }
 
@@ -647,7 +647,7 @@
         left: calc(396 / 1024 * 100vw);
         width: clamp(40px, 16vw, 160px);
         height: auto;
-        transform: rotate(-117.38deg);
+        rotate: -117.38deg;
         aspect-ratio: 99.77 / 104.143;
     }
 
@@ -672,7 +672,7 @@
         left: calc(-57 / 1024 * 100vw);
         width: clamp(60px, 24vw, 240px);
         height: auto;
-        transform: rotate(77deg);
+        rotate: 77deg;
         aspect-ratio: 133.036 / 129.566;
     }
 
@@ -681,7 +681,7 @@
         left: calc(415 / 1024 * 100vw);
         width: clamp(50px, 18vw, 180px);
         height: auto;
-        transform: rotate(21deg);
+        rotate: 21deg;
         aspect-ratio: 92.817 / 103.445;
     }
 
@@ -690,7 +690,7 @@
         left: calc(60 / 1024 * 100vw);
         width: clamp(55px, 20vw, 220px);
         height: auto;
-        transform: rotate(16.356deg);
+        rotate: 16.356deg;
         flex-shrink: 0;
         aspect-ratio: 111.489 / 113.317;
     }
@@ -700,7 +700,7 @@
         left: calc(665 / 1024 * 100vw);
         width: clamp(50px, 20vw, 198px);
         height: auto;
-        transform: rotate(-8.982deg);
+        rotate: -8.982deg;
         flex-shrink: 0;
         aspect-ratio: 103.006 / 101.236;
     }
@@ -710,7 +710,7 @@
         left: calc(600 / 1024* 100vw);
         width: clamp(80px, 28vw, 348px);
         height: auto;
-        transform: rotate(-13.833deg);
+        rotate: -13.833deg;
         flex-shrink: 0;
         aspect-ratio: 157.987 / 142.801;
     }
@@ -720,7 +720,7 @@
         left: calc(859 / 1024 * 100vw);
         width: clamp(60px, 22vw, 225px);
         height: auto;
-        transform: rotate(-53.331deg);
+        rotate: -53.331deg;
         flex-shrink: 0;
         aspect-ratio: 110.078 / 92.523;
     }
@@ -825,7 +825,7 @@
 
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
     .tittle {
         aspect-ratio: 401 / 175.79;
         top: calc(640 / 852 * 100vh);
@@ -871,7 +871,7 @@
         left: calc(89.5 / 393 * 100vw);
         width: clamp(60px, 21.5vw, 90px);
         height: auto;
-        transform: rotate(25.69deg);
+        rotate: 25.69deg;
         aspect-ratio: 84.065 / 89.089;
     }
 
@@ -880,7 +880,7 @@
         left: calc(98 / 393 * 100vw);
         width: clamp(70px, 22.4vw, 110px);
         height: auto;
-        transform: rotate(-117.38deg);
+        rotate: -117.38deg;
         aspect-ratio: 99.77 / 104.143;
     }
 
@@ -905,7 +905,7 @@
         left: calc(-36 / 393 * 100vw);
         width: clamp(90px, 25vw, 150px);
         height: auto;
-        transform: rotate(77deg);
+        rotate: 77deg;
         aspect-ratio: 133.036 / 129.566;
     }
 
@@ -914,7 +914,7 @@
         left: calc(115 / 393 * 100vw);
         width: clamp(70px, 20vw, 110px);
         height: auto;
-        transform: rotate(21deg);
+        rotate: 21deg;
         aspect-ratio: 92.817 / 103.445;
     }
 
@@ -923,7 +923,7 @@
         left: calc(-5 / 393 * 100vw);
         width: clamp(80px, 24.4vw, 120px);
         height: auto;
-        transform: rotate(16.356deg);
+        rotate: 16.356deg;
         flex-shrink: 0;
         aspect-ratio: 111.489 / 113.317;
     }
@@ -933,7 +933,7 @@
         left: calc(227 / 393 * 100vw);
         width: clamp(70px, 26.2vw, 120px);
         height: auto;
-        transform: rotate(-8.982deg);
+        rotate: -8.982deg;
         flex-shrink: 0;
         aspect-ratio: 103.006 / 101.236;
     }
@@ -943,7 +943,7 @@
         left: calc(208 / 393 * 100vw);
         width: clamp(110px, 34vw, 170px);
         height: auto;
-        transform: rotate(-13.833deg);
+        rotate: -13.833deg;
         flex-shrink: 0;
         aspect-ratio: 157.987 / 142.801;
     }
@@ -953,7 +953,7 @@
         left: calc(318 / 393 * 100vw);
         width: clamp(80px, 28vw, 130px);
         height: auto;
-        transform: rotate(-53.331deg);
+        rotate: -53.331deg;
         flex-shrink: 0;
         aspect-ratio: 110.078 / 92.523;
     }
