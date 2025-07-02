@@ -31,7 +31,7 @@ img {
     --jp-font: ryo-gothic-plusn, sans-serif;
     --jichikai-font: novantique-script, sans-serif;
 
-    --font-size-Heading-L: clamp(1.5rem, calc(3rem + 0.625vw), 4.2rem);
+    --font-size-Heading-L: clamp(1.8rem, calc(1.19rem + 2.51vw), 4.2rem);
     --font-size-Heading-M: clamp(1.8rem, calc(1.4rem + 0.625vw), 3.6rem);
     --font-size-Heading-Ms: clamp(1.32rem, calc(1.1rem + 1vw), 3.6rem);
     --font-size-Heading-R: clamp(1.6rem, calc(1rem + 1vw), 3.6rem);
