@@ -10,7 +10,7 @@
 html {
     overflow-y: scroll;
     overflow-x: hidden;
-    scroll-padding-top: 23vh;
+    scroll-padding-top: 20vh;
     scroll-behavior: smooth;
     font-size: 62.5%;
     background-color: var(--color-Ecru);
@@ -79,8 +79,9 @@ time {
     font-family: var(--jp-font);
     font-style: normal;
     font-optical-sizing: auto;
-    line-break: strict;
     font-feature-settings: "palt" on;
+    line-break: strict;
+    overflow-wrap: break-word;
 }
 
 h2 {
@@ -155,7 +156,8 @@ a {
 
 #g-nav li a {
     padding: 10px;
-    display: block;
+    display: flex;
+    align-items: center;
     font-size: var(--font-size-Heading-R);
     font-weight: 500;
     line-height: var(--line-height-Heading-R);
@@ -163,6 +165,43 @@ a {
     text-transform: uppercase;
     transition: all .4s
 }
+
+#g-nav .red a::before {
+    content: "";
+    display: inline-block;
+    background-image: url('../images/rock-red.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 1em;
+    aspect-ratio: 1 / 1;
+}
+
+#g-nav .green a::before {
+    content: "";
+    display: inline-block;
+    background-image: url('../images/rock-green.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 1em;
+    aspect-ratio: 1 / 1;
+}
+
+#g-nav .blue a::before {
+    content: "";
+    display: inline-block;
+    background-image: url('../images/rock-blue.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 1em;
+    aspect-ratio: 1 / 1;
+}
+
 
 #g-nav li a:hover,
 #g-nav li a:active {
@@ -245,19 +284,20 @@ a {
     margin-top: 0.2em;
 }
 
-#page-top a:hover {
+#page-top a:hover,
+#page-top a:active {
     transform: scale(1.06);
 }
 
 /*リンクを右下に固定*/
 #page-top {
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    right: 30px;
+    bottom: 100px;
     z-index: 999;
     /*はじめは非表示*/
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(300px);
 }
 
 /*　上に上がる動き　*/
@@ -269,7 +309,7 @@ a {
 @keyframes UpAnime {
     from {
         opacity: 0;
-        transform: translateY(200px);
+        transform: translateY(300px);
     }
 
     to {
@@ -292,7 +332,7 @@ a {
 
     to {
         opacity: 1;
-        transform: translateY(200px);
+        transform: translateY(300px);
     }
 }
 
@@ -309,42 +349,6 @@ a {
 .blue,
 .blue a {
     color: var(--color-BLUE);
-}
-
-#g-nav .red a::before {
-    content: "";
-    display: inline-block;
-    background-image: url('../images/rock-red.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1em;
-    vertical-align: middle;
-    margin-right: 1em;
-    aspect-ratio: 1 / 1;
-}
-
-#g-nav .green a::before {
-    content: "";
-    display: inline-block;
-    background-image: url('../images/rock-green.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1em;
-    vertical-align: middle;
-    margin-right: 1em;
-    aspect-ratio: 1 / 1;
-}
-
-#g-nav .blue a::before {
-    content: "";
-    display: inline-block;
-    background-image: url('../images/rock-blue.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 1em;
-    vertical-align: middle;
-    margin-right: 1em;
-    aspect-ratio: 1 / 1;
 }
 
 .pic-up-program {
@@ -367,7 +371,8 @@ a {
     transition: all .3s ease-out;
 }
 
-.pic-up-program__content:hover {
+.pic-up-program__content:hover,
+.pic-up-program__content:active {
     transform: scale(1.02);
 }
 
@@ -420,7 +425,6 @@ footer .zokei-logo {
 }
 
 footer .sns {
-    width: fit-content;
     margin: 0 auto;
 }
 
@@ -428,21 +432,32 @@ footer .sns {
     font-family: var(--en-heading-font);
     font-size: var(--font-size-R);
     font-weight: 600;
+    text-align: center;
     margin-bottom: 0.5em;
+    white-space: nowrap;
 }
 
 .sns__flex-container {
+    width: 105px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
 
-footer .sns__flex-container a img {
-    height: 4.6em;
+footer .sns__flex-container a i {
+    display: block;
+    height: clamp(28px, calc(11.65px + 1.42vw), 48px);
     transition: all .4s ease;
 }
 
-.sns a:hover img {
+footer .sns__flex-container a i img {
+    height: 100%;
+    width: auto;
+}
+
+.sns a:hover i,
+.sns a:active i {
     transform: scale(1.1)
 }
 
@@ -453,6 +468,11 @@ footer .sns__flex-container a img {
 
 
 @media only screen and (max-width: 1280px) {
+    #page-top {
+        right: 10px;
+        bottom: 10px;
+    }
+
     .pic-up-program {
         width: 80vw;
         margin: 24vh auto 6vh;
