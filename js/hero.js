@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function animateHumans() {
         humans.forEach(el => {
-            const delay = Math.random() * 1000;
+            const delay = Math.random() * 500;
             setTimeout(() => {
                 el.classList.add('action');
             }, delay);
