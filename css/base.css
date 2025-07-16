@@ -94,6 +94,7 @@ h2 {
 
 p,
 address {
+    z-index: 99;
     font-size: var(--font-size-R);
     font-style: normal;
     font-weight: 400;
@@ -223,7 +224,7 @@ a {
 }
 
 .g-nav-openbtn:hover {
-    transform: scale(110%);
+    transform: scale(1.1);
 }
 
 /*×に変化*/
@@ -294,8 +295,8 @@ a {
 #page-top {
     position: fixed;
     right: 30px;
-    bottom: 100px;
-    z-index: 999;
+    bottom: 50px;
+    z-index: 998;
     /*はじめは非表示*/
     opacity: 0;
     transform: translateX(300px);
