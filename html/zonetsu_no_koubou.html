@@ -39,8 +39,7 @@
     }
 
     .zonetsu-no-koubou_logo {
-      width: clamp(180px, calc(10vw + 100px), 500px);
-
+      width: 500px;
     }
 
     .tool-column {
@@ -196,7 +195,7 @@
       background-image: url('../images/rock-green.png');
       background-size: contain;
       background-repeat: no-repeat;
-      height: 1.4em;
+      height: 1em;
       vertical-align: middle;
       margin-right: 0.4em;
       aspect-ratio: 1 / 1;
@@ -395,6 +394,17 @@
     }
 
     @media only screen and (max-width: 1280px) {
+      .zonetsu-no-koubou_logo {
+        width: 300px;
+      }
+
+      .tool-column {
+        position: absolute;
+        width: 68vw;
+        left: 16vw;
+        bottom: 7vh;
+      }
+
       #toolbar {
         flex-direction: column;
       }
@@ -402,7 +412,9 @@
       .toolbar-row {
         width: 68vw;
         flex-direction: row;
-        gap: calc((68vw - (44px * 5)) / 4);
+        gap: calc((68vw - (68px * 5)) / 4);
+        margin-bottom: 20px;
+
       }
 
       .piece-toolbar img {
@@ -410,6 +422,10 @@
         max-height: 64px;
       }
 
+      .color-selecter {
+        width: 14vw;
+        height: 44px;
+      }
 
       .red-selecter,
       .green-selecter,
@@ -417,19 +433,88 @@
         width: 44px;
         height: 44px;
       }
+
+      .board-wrapper {
+        width: 68vw;
+        height: 68vw;
+      }
+
+      .description-container {
+        width: 68vw;
+        top: 14%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+
+      .description-container h2 {
+        display: none;
+      }
+
+      .description-container p {
+        font-size: var(--font-size-Rs);
+        margin-bottom: 1em;
+      }
+
+      .description-container__left {
+        position: absolute;
+        left: 0;
+      }
+
+      .description-container__right {
+        position: absolute;
+        top: 5vw;
+        right: 0;
+      }
     }
 
     @media only screen and (max-width: 767px) {
+      .zonetsu-no-koubou_logo {
+        width: 180px;
+      }
+
+      .tool-column {
+        position: absolute;
+        width: 14vw;
+        left: 6vw;
+        bottom: 2vh;
+      }
+
       .toolbar-row {
         width: 88vw;
         flex-direction: row;
         gap: calc((88vw - (44px * 5)) / 4);
+        margin-bottom: 10px;
       }
 
       .piece-toolbar img {
         max-width: 44px;
         max-height: 44px;
       }
+
+      .color-selecter {
+        height: 32px;
+        margin-top: 16px;
+      }
+
+      .red-selecter,
+      .green-selecter,
+      .blue-selecter {
+        width: 32px;
+        height: 32px;
+      }
+
+      .board-wrapper {
+        width: 88vw;
+        height: 88vw;
+      }
+
+      .description-container {
+        width: 94vw;
+        height: 20vh;
+        top: 19%;
+      }
+
+
     }
   </style>
   <link rel="stylesheet" href="../css/reset.css">
@@ -519,12 +604,16 @@
       </div>
       <div class="description-container">
         <h2>造熱の遊び方</h2>
-        <p>パーツをドラッグ＆ドロップで配置する</p>
-        <p>パーツを選択する</p>
-        <p>パーツの辺を掴んで拡大・縮小する</p>
-        <p>パーツの角を掴んで回転する</p>
-        <p>パーツの色を変更する</p>
-        <p>完成したオブジェクトをダウンロードする</p>
+        <div class="escription-container__left">
+          <p>パーツをドラッグ＆ドロップで配置する</p>
+          <p>パーツを選択する</p>
+          <p>パーツの辺を掴んで拡大・縮小する</p>
+        </div>
+        <div class="description-container__right">
+          <p>パーツの角を掴んで回転する</p>
+          <p>パーツの色を変更する</p>
+          <p>完成したオブジェクトをダウンロードする</p>
+        </div>
       </div>
       <div class="button-container">
         <button id="save" type="button">
