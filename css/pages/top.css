@@ -274,11 +274,15 @@
 
 .radio p,
 .koubou p {
+    position: relative;
+    z-index: 99;
     width: 39vw;
     margin: 0 auto;
 }
 
 .baner img {
+    position: relative;
+    z-index: 10;
     transition: all .4s ease;
 }
 
@@ -386,6 +390,10 @@
     .radio p,
     .koubou p {
         width: 60vw;
+    }
+
+    .koubou {
+        display: none;
     }
 }
 
