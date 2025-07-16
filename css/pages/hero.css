@@ -764,14 +764,14 @@
         top: 34vh;
         left: 28vw;
         width: 12vw;
-        transform: rotate(26deg);
+        rotate: 26.326deg;
     }
 
     .ipad-landscape .human_2 {
         top: 2vh;
         left: 32vw;
         width: 16vw;
-        transform: rotate(-32deg);
+        rotate: -31.898deg;
     }
 
     .ipad-landscape .human_3 {
@@ -796,7 +796,7 @@
         top: 0vh;
         left: 48vw;
         width: 13vw;
-        transform: rotate(47deg);
+        rotate: 47.024deg;
     }
 
     .ipad-landscape .human_7 {

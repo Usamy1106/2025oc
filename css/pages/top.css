@@ -39,8 +39,11 @@
 #program,
 #about,
 #theme,
+#greeting,
 #pic-up-program,
-#access {
+#access,
+#radio,
+#koubou {
     position: relative;
     z-index: 99;
 }
@@ -106,7 +109,7 @@
 
 .program a:hover,
 .program a:active {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 
 .program a span {
@@ -135,8 +138,14 @@
 
 }
 
+.greeting .diagonal {
+    left: -19%;
+    top: -48px;
+}
+
 .theme,
-.about {
+.about,
+.greeting {
     position: relative;
     width: 39vw;
     margin: 55vh auto;
@@ -179,57 +188,46 @@
     width: auto;
 }
 
-.about .human-img01 {
+.human-img__right {
     position: absolute;
-    top: clamp(-400px, calc(248.17px - 30.3vw), -130px);
-    right: calc(133.66px - 34.38vw);
-    width: clamp(75px, 23.3vw, 260px);
+    top: clamp(-260px, calc(-59.95px - 10.42vw), -140px);
+    right: clamp(-320px, calc(-20px - 15.625vw), -140px);
+    width: clamp(85px, calc(40.4px + 11.438vw), 260px);
+}
+
+.human-img__left {
+    position: absolute;
+    bottom: clamp(-230px, calc(-63.45px - 8.68vw), -130px);
+    left: clamp(-300px, calc(-16.64px - 14.76vw), -130px);
+    width: clamp(85px, calc(40.4px + 11.438vw), 260px);
+}
+
+.about .human-img__right {
     rotate: 268deg;
 }
 
-.about .human-img02 {
-    position: absolute;
-    top: clamp(-160px, calc(-160px + (100vw - 375px) * 0.206), 60px);
-    left: clamp(-450px, calc(20px - (100vw - 375px) * 0.43), 20px);
-    width: clamp(108px, 23.3vw, 260px);
+.about .human-img__left {
     rotate: 57deg;
 }
 
-.about .human-img03 {
-    position: absolute;
-    bottom: clamp(-300px, calc(-7.53px - 24.79vw), -124px);
-    right: clamp(-460px, calc(133.66px - 34.38vw), -20px);
-    width: clamp(108px, 23.3vw, 360px);
+.theme .human-img__right {
     rotate: 322deg;
 }
 
-.theme .human-img01 {
-    position: absolute;
-    top: -150px;
-    left: clamp(-450px, calc(20px - (100vw - 375px) * 0.43), 20px);
-    width: clamp(100px, 22vw, 260px);
+.theme .human-img__left {}
+
+.greeting .human-img__right {
+    rotate: 34deg;
 }
 
-.theme .human-img02 {
-    position: absolute;
-    bottom: -150px;
-    right: clamp(-460px, calc(133.66px - 34.38vw), -20px);
-    width: clamp(108px, 23.3vw, 280px);
-    rotate: 30deg;
-}
-
-.theme .human-img03 {
-    position: absolute;
-    bottom: clamp(-114px, calc(-267.86px + 23.99vw), -400px);
-    left: clamp(-450px, calc(20px - (100vw - 375px) * 0.43), 20px);
-    width: clamp(100px, 22vw, 240px);
-    rotate: 89deg;
+.greeting .human-img__left {
+    rotate: 83deg;
 }
 
 .access .human-img01 {
     position: absolute;
     top: clamp(-280px, calc(-100px + (100vw - 375px) * -0.169), -100px);
-    left: clamp(-350px, calc(-10px + (100vw - 375px) * -0.319), -10px);
+    left: clamp(-450px, calc(20px - (100vw - 375px) * 0.43), 20px);
 
     width: clamp(100px, 22vw, 260px);
 }
@@ -259,6 +257,35 @@
     rotate: 353deg;
 }
 
+.campus-map,
+.radio,
+.koubou {
+    width: 70vw;
+    margin: 32vh auto 16vh;
+}
+
+.campus-map h3 {
+    font-size: var(--font-size-Heading-R);
+    font-weight: 500;
+    line-height: var(--line-height-Heading-R);
+    letter-spacing: var(--letter-spacing-Heading-R);
+    margin-top: 3em
+}
+
+.radio p,
+.koubou p {
+    width: 39vw;
+    margin: 0 auto;
+}
+
+.baner img {
+    transition: all .4s ease;
+}
+
+.baner img:hover,
+.baner img:active {
+    transform: scale(1.04);
+}
 
 .zoomIn-trigger {
     opacity: 0;
@@ -312,7 +339,8 @@
     }
 
     .theme,
-    .about {
+    .about,
+    .greeting {
         width: 60vw;
         margin: 25vh auto;
     }
@@ -341,6 +369,23 @@
     .theme .diagonal {
         left: -19%;
         top: -20px;
+    }
+
+    .greeting .diagonal {
+        left: -19%;
+        top: -28px;
+    }
+
+    .campus-map,
+    .radio,
+    .koubou {
+        width: 80vw;
+        margin: 24vh auto 6vh;
+    }
+
+    .radio p,
+    .koubou p {
+        width: 60vw;
     }
 }
 
@@ -435,7 +480,8 @@
     }*/
 
     .theme,
-    .about {
+    .about,
+    .greeting {
         width: 88vw;
     }
 
@@ -449,7 +495,8 @@
     }
 
     .about .diagonal,
-    .theme .diagonal {
+    .theme .diagonal,
+    .greeting .diagonal {
         left: -6%;
         top: -3em;
     }
@@ -458,5 +505,15 @@
         top: -3.2em;
     }
 
+    .campus-map,
+    .radio,
+    .koubou {
+        width: 88vw;
+        margin: 16vh auto 16vh;
+    }
 
+    .radio p,
+    .koubou p {
+        width: 88vw;
+    }
 }
